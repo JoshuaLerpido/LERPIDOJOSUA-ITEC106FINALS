@@ -1,0 +1,11 @@
+node_modules
+vendor
+.git
+.env
+.env.backup
+storage/logs/*.log
+public/storage
+public/hot
+*.md
+tests/
+.github/

@@ -3,15 +3,15 @@
 # Generate app key if not set
 php artisan key:generate --force
 
-# Cache config & routes
+# Run migrations
+php artisan migrate --force
+
+# Cache for performance
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 
-# Run migrations
-php artisan migrate --force
-
-# Create storage symlink
+# Storage link
 php artisan storage:link || true
 
 # Start PHP-FPM in background
