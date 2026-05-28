@@ -3,6 +3,7 @@ FROM php:8.4-fpm-alpine
 # Install dependencies
 RUN apk add --no-cache \
     nginx \
+    supervisor \
     curl \
     zip \
     unzip \
