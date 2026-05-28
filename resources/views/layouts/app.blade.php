@@ -209,7 +209,7 @@
             </svg>
         </div>
         <div class="brand-name">Porsche</div>
-        <div class="brand-sub">Records System</div>
+        <div class="brand-sub">Vehicle List</div>
     </div>
 
     <div class="nav-section-label">Main</div>
