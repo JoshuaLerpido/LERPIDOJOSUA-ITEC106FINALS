@@ -31,7 +31,9 @@ class VehicleController extends Controller
 
     public function update(Request $request, Vehicle $vehicle)
     {
-        $this->authorize('update', $vehicle);
+        if ($vehicle->user_id !== auth()->id()) {
+            abort(403);
+        }
 
         $request->validate([
             'model'        => 'required|string|max:255',
@@ -49,7 +51,10 @@ class VehicleController extends Controller
 
     public function destroy(Vehicle $vehicle)
     {
-        $this->authorize('delete', $vehicle);
+        if ($vehicle->user_id !== auth()->id()) {
+            abort(403);
+        }
+
         $vehicle->delete();
         return back()->with('toast_success', 'Vehicle record deleted successfully.');
     }
