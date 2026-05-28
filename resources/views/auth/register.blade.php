@@ -23,7 +23,7 @@
                 </svg>
             </div>
             <h4>Porsche</h4>
-            <small>Create Account</small>
+            <small>Vehicle List</small>
         </div>
 
         @if($errors->any())
